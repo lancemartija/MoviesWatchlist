@@ -5,7 +5,7 @@
       color: $cp4;
       font-size: 3rem;
       text-shadow: .3125rem .3125rem 0rem #00000020;
-      letter-spacing: .6rem;
+      letter-spacing: .625rem;
     }
 
     >h1>span {
@@ -17,6 +17,38 @@
       border: 2px solid;
       border-radius: 50%;
       box-shadow: .3125rem .3125rem 0rem #00000020;
+    }
+
+    .typewriter {
+      overflow: hidden;
+      border-right: .3rem solid $cp4;
+      white-space: nowrap;
+      margin: 2.5rem auto;
+      animation:
+        typing 4s steps(24, end),
+        blink-caret .75s step-end infinite;
+    }
+
+    @keyframes typing {
+      from {
+        width: 0
+      }
+
+      to {
+        width: 100%
+      }
+    }
+
+    @keyframes blink-caret {
+
+      from,
+      to {
+        border-color: transparent
+      }
+
+      50% {
+        border-color: $cp4;
+      }
     }
   }
 
