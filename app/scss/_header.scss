@@ -1,0 +1,21 @@
+.header {
+
+  &__title {
+    >h1 {
+      color: $cp4;
+      font-size: 3rem;
+      text-shadow: .3125rem .3125rem 0rem #00000020;
+      letter-spacing: .5rem;
+    }
+  }
+
+  &__menu {
+
+    // mobile menu
+    >span {
+      display: block;
+    }
+  }
+
+  &__links {}
+}
