@@ -61,7 +61,7 @@ a:hover {
   color: #A19882;
   font-size: 3rem;
   text-shadow: .3125rem .3125rem 0rem #00000020;
-  letter-spacing: .6rem;
+  letter-spacing: .625rem;
 }
 
 .header__title > h1 > span {
@@ -74,6 +74,53 @@ a:hover {
   border-radius: 50%;
   -webkit-box-shadow: .3125rem .3125rem 0rem #00000020;
           box-shadow: .3125rem .3125rem 0rem #00000020;
+}
+
+.header__title .typewriter {
+  overflow: hidden;
+  border-right: 0.3rem solid #A19882;
+  white-space: nowrap;
+  margin: 2.5rem auto;
+  -webkit-animation: typing 4s steps(24, end), blink-caret 0.75s step-end infinite;
+          animation: typing 4s steps(24, end), blink-caret 0.75s step-end infinite;
+}
+
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@-webkit-keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #A19882;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #A19882;
+  }
 }
 
 .header__menu > span {
