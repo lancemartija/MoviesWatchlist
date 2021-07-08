@@ -5,7 +5,18 @@
       color: $cp4;
       font-size: 3rem;
       text-shadow: .3125rem .3125rem 0rem #00000020;
-      letter-spacing: .5rem;
+      letter-spacing: .6rem;
+    }
+
+    >h1>span {
+      display: inline-block;
+      position: relative;
+      padding: .125rem;
+      margin: .625rem 1rem;
+      background-color: $cp4;
+      border: 2px solid;
+      border-radius: 50%;
+      box-shadow: .3125rem .3125rem 0rem #00000020;
     }
   }
 
@@ -17,5 +28,39 @@
     }
   }
 
-  &__links {}
+  &__links {
+    >a {
+      color: $cp3;
+      margin: .625rem;
+      position: relative;
+    }
+
+    >a::before {
+      transform: scaleX(0);
+      transform-origin: bottom right;
+    }
+
+    >a:hover::before {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+
+    >a::before {
+      content: " ";
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      inset: 0 0 0 0;
+      background-color: $cp2;
+      z-index: -1;
+      transition: transform .2s ease-in-out;
+    }
+
+    >a:active {
+      color: $white;
+    }
+  }
 }
