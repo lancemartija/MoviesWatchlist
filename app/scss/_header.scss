@@ -3,7 +3,7 @@
     >h1 {
       color: $cp4;
       font-size: $font-xlg;
-      text-shadow: .3125rem .3125rem 0rem #00000020;
+      text-shadow: .3125rem .3125rem 0 #00000020;
       letter-spacing: .625rem;
 
       &>span {
@@ -13,8 +13,8 @@
         margin: .625rem 1rem;
         background-color: $cp4;
         border: .125rem solid;
-        border-radius: 50%;
-        box-shadow: .3125rem .3125rem 0rem #00000020;
+        border-radius: 100%;
+        box-shadow: .3125rem .3125rem 0 #00000020;
       }
     }
 
@@ -52,6 +52,8 @@
   }
 
   &__links {
+    margin-bottom: 2.5rem;
+
     &--active {
       font-weight: 400;
 
