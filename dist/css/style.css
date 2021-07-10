@@ -59,7 +59,7 @@ a:hover {
 
 .header__title > h1 {
   color: #A19882;
-  font-size: 3rem;
+  font-size: 3.25rem;
   text-shadow: .3125rem .3125rem 0rem #00000020;
   letter-spacing: .625rem;
 }
@@ -70,7 +70,7 @@ a:hover {
   padding: .125rem;
   margin: .625rem 1rem;
   background-color: #A19882;
-  border: 2px solid;
+  border: .125rem solid;
   border-radius: 50%;
   -webkit-box-shadow: .3125rem .3125rem 0rem #00000020;
           box-shadow: .3125rem .3125rem 0rem #00000020;
@@ -123,10 +123,6 @@ a:hover {
   }
 }
 
-.header__menu > span {
-  display: block;
-}
-
 .header__links > a {
   color: #C2B8A3;
   position: relative;
@@ -134,6 +130,10 @@ a:hover {
 
 .header__links > a:not(:nth-last-child(1)) {
   margin-right: 4rem;
+}
+
+.header__links > a:active {
+  color: #fff;
 }
 
 .header__links > a::before {
@@ -165,9 +165,5 @@ a:hover {
   transition: -webkit-transform .2s ease-in-out;
   transition: transform .2s ease-in-out;
   transition: transform .2s ease-in-out, -webkit-transform .2s ease-in-out;
-}
-
-.header__links > a:active {
-  color: #fff;
 }
 /*# sourceMappingURL=style.css.map */
