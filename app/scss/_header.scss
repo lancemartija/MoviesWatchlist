@@ -63,8 +63,11 @@
   &__links {
     >a {
       color: $cp3;
-      margin: .625rem;
       position: relative;
+    }
+
+    >a:not(:nth-last-child(1)) {
+      margin-right: 4rem;
     }
 
     >a::before {
@@ -92,7 +95,7 @@
     }
 
     >a:active {
-      color: $white;
+      color: #fff;
     }
   }
 }
