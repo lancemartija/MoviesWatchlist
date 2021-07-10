@@ -123,7 +123,21 @@ a:hover {
   }
 }
 
+.header__links--active {
+  font-weight: 400;
+}
+
+.header__links--active::before {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -8px;
+  background-color: #C2B8A3;
+}
+
 .header__links > a {
+  font-size: 1.125rem;
   color: #C2B8A3;
   position: relative;
 }
@@ -132,32 +146,32 @@ a:hover {
   margin-right: 4rem;
 }
 
-.header__links > a:active {
-  color: #fff;
+.header__links > a:not(:nth-child(1)) {
+  font-weight: 300;
 }
 
-.header__links > a::before {
+.header__links > a:not(:nth-child(1)):active {
+  color: #FEF7DC;
+}
+
+.header__links > a:not(:nth-child(1))::before {
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
   -webkit-transform-origin: bottom right;
           transform-origin: bottom right;
 }
 
-.header__links > a:hover::before {
+.header__links > a:not(:nth-child(1)):hover::before {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
 }
 
-.header__links > a::before {
+.header__links > a:not(:nth-child(1))::before {
   content: " ";
   display: block;
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
   inset: 0 0 0 0;
   background-color: #E6DDC6;
   z-index: -1;
