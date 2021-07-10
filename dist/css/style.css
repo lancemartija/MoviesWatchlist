@@ -129,8 +129,11 @@ a:hover {
 
 .header__links > a {
   color: #C2B8A3;
-  margin: .625rem;
   position: relative;
+}
+
+.header__links > a:not(:nth-last-child(1)) {
+  margin-right: 4rem;
 }
 
 .header__links > a::before {
