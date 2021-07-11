@@ -6,9 +6,12 @@
     &--cover-photo {
       margin: 0 0 2.5rem 0;
 
-      background-image: url('/app/images/the-lobster-photo.jpg');
-      background-size: cover;
-      background-position-y: 55%;
+      background: {
+        image: url('/app/images/the-lobster-photo.jpg');
+        size: cover;
+        position-y: 55%;
+      }
+
       width: 100%;
       height: 50vh;
 
@@ -24,9 +27,13 @@
       >h1 {
         font-size: $font-xlg - 1.25rem;
         color: $cp4;
-        text-transform: uppercase;
+
+        text: {
+          transform: uppercase;
+          shadow: .1875rem .1875rem 0 #00000020;
+        }
+
         letter-spacing: .625rem;
-        text-shadow: .1875rem .1875rem 0 #00000020;
 
         &::before {
           content: " ";
