@@ -95,7 +95,7 @@ a:hover {
   padding: .125rem;
   margin: .625rem 1rem;
   background-color: #A19882;
-  border: .125rem solid;
+  border: 0.125rem solid;
   border-radius: 100%;
   -webkit-box-shadow: .3125rem .3125rem 0 #00000020;
           box-shadow: .3125rem .3125rem 0 #00000020;
@@ -234,8 +234,8 @@ a:hover {
   font-size: 2rem;
   color: #A19882;
   text-transform: uppercase;
-  letter-spacing: .625rem;
   text-shadow: .1875rem .1875rem 0 #00000020;
+  letter-spacing: .625rem;
 }
 
 .main__section--header-text > h1::before {
