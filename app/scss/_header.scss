@@ -1,10 +1,13 @@
 .header {
+  max-width: 85rem;
+  margin: auto;
+
   &__title {
     >h1 {
       color: $cp4;
       font-size: $font-xlg;
       text-shadow: .3125rem .3125rem 0 #00000020;
-      letter-spacing: .625rem;
+      letter-spacing: .375rem;
 
       &>span {
         display: inline-block;
@@ -21,13 +24,13 @@
       }
     }
 
-    .typewriter {
+    /*.typewriter {
       overflow: hidden;
       border-right: .3rem solid $cp4;
       white-space: nowrap;
       margin: 2.5rem auto;
       animation:
-        typing 4s steps(24, end),
+        typing 2.5s steps(24, end),
         blink-caret .75s step-end infinite;
 
       @keyframes typing {
@@ -51,12 +54,10 @@
           border-color: $cp4;
         }
       }
-    }
+    }*/
   }
 
   &__links {
-    margin-bottom: 2.5rem;
-
     &--active {
       font-weight: 400;
 
@@ -76,7 +77,7 @@
       position: relative;
 
       &:not(:nth-last-child(1)) {
-        margin-right: 4rem;
+        margin-right: 3rem;
       }
 
       &:not(:nth-child(1)) {
