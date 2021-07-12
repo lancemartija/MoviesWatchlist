@@ -247,8 +247,8 @@ a:hover {
   background-size: cover;
   background-position-y: 30%;
   margin: 1rem 0 0 0;
-  -webkit-animation: fadeInImg1 1.3s ease-in-out 0s forwards;
-          animation: fadeInImg1 1.3s ease-in-out 0s forwards;
+  -webkit-animation: fadeInImg2 1.3s ease-in-out 0s forwards;
+          animation: fadeInImg2 1.3s ease-in-out 0s forwards;
 }
 
 @-webkit-keyframes fadeInImg2 {
