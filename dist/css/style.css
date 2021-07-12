@@ -216,6 +216,14 @@ a:hover {
 
 @-webkit-keyframes fadeInImg {
   0% {
+    opacity: 0;
+  }
+  1% {
+    -webkit-clip-path: polygon(0 14%, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 14%, 100% 0, 100% 100%, 0 100%);
+    opacity: 0;
+  }
+  50% {
     -webkit-clip-path: polygon(0 14%, 100% 0, 100% 100%, 0 100%);
             clip-path: polygon(0 14%, 100% 0, 100% 100%, 0 100%);
     opacity: 0;
@@ -229,6 +237,14 @@ a:hover {
 
 @keyframes fadeInImg {
   0% {
+    opacity: 0;
+  }
+  1% {
+    -webkit-clip-path: polygon(0 14%, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 14%, 100% 0, 100% 100%, 0 100%);
+    opacity: 0;
+  }
+  50% {
     -webkit-clip-path: polygon(0 14%, 100% 0, 100% 100%, 0 100%);
             clip-path: polygon(0 14%, 100% 0, 100% 100%, 0 100%);
     opacity: 0;
@@ -289,8 +305,8 @@ a:hover {
 }
 
 .main__section--hero .third {
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
+  -webkit-animation-delay: 1.6s;
+          animation-delay: 1.6s;
 }
 
 @-webkit-keyframes fadeInUp {
