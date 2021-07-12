@@ -14,14 +14,10 @@
         position-y: 75%;
       }
 
-      animation: fadeInImg 1s ease-in-out 0s forwards;
+      animation: fadeInImg 1.3s ease-in-out 0s forwards;
 
       @keyframes fadeInImg{
         0% {
-          opacity: 0;
-        }
-
-        1% {
           clip-path: polygon(0 14%, 100% 0, 100% 100%, 0 100%);
           opacity: 0;
         }
@@ -76,15 +72,15 @@
       }
 
       .first {
-        animation-delay: .3s;
-      }
-
-      .second {
         animation-delay: 1s;
       }
 
+      .second {
+        animation-delay: 1.3s;
+      }
+
       .third {
-        animation-delay: 1.6s;
+        animation-delay: 2.6s;
       }
 
       @keyframes fadeInUp {
