@@ -257,44 +257,8 @@ a:hover {
   background-size: cover;
   background-position-y: 30%;
   margin: 1rem 0 0 0;
-  -webkit-animation: fadeInImg2 1.3s ease-in-out 0s forwards;
-          animation: fadeInImg2 1.3s ease-in-out 0s forwards;
-}
-
-@-webkit-keyframes fadeInImg2 {
-  0% {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 86%);
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 86%);
-    opacity: 0;
-  }
-  50% {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 86%);
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 86%);
-    opacity: 0;
-  }
-  100% {
-    -webkit-clip-path: polygon(0 0, 100% 14%, 100% 100%, 0 100%);
-            clip-path: polygon(0 0, 100% 14%, 100% 100%, 0 100%);
-    opacity: 1;
-  }
-}
-
-@keyframes fadeInImg2 {
-  0% {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 86%);
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 86%);
-    opacity: 0;
-  }
-  50% {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 86%);
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 86%);
-    opacity: 0;
-  }
-  100% {
-    -webkit-clip-path: polygon(0 0, 100% 14%, 100% 100%, 0 100%);
-            clip-path: polygon(0 0, 100% 14%, 100% 100%, 0 100%);
-    opacity: 1;
-  }
+  -webkit-clip-path: polygon(0 0, 100% 14%, 100% 100%, 0 100%);
+          clip-path: polygon(0 0, 100% 14%, 100% 100%, 0 100%);
 }
 
 .main__section--hero {
@@ -307,6 +271,7 @@ a:hover {
   text-shadow: .125rem .125rem 0 #00000020;
   font-size: 1.25rem;
   font-weight: 600;
+  font-style: italic;
   opacity: 0;
   animation: fadeInUp 1s ease-in-out 0s forwards;
   -webkit-animation: fadeInUp 1s ease-in-out 0s forwards;
@@ -435,7 +400,7 @@ a:hover {
           box-shadow: .1875rem .1875rem 0 #00000020;
 }
 
-.main__section--text-box-1 {
+.main__section--card-1 {
   padding: 4rem;
   margin: 0.625rem;
   color: #202020;
@@ -443,7 +408,7 @@ a:hover {
   background: #C2B8A3;
 }
 
-.main__section--text-box-2 {
+.main__section--card-2 {
   padding: 4rem;
   margin: 0.625rem;
   color: #202020;
