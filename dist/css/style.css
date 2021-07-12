@@ -203,18 +203,18 @@ a:hover {
   margin: auto;
 }
 
-.main__section--cover-photo {
+.main__section--cover-photo-1 {
   margin: 0 0 1rem 0;
   width: 100%;
   height: 68vh;
-  background-image: url("/app/images/the-lobster-photo.jpg");
+  background-image: url("/app/images/the-lobster-photo-1.jpg");
   background-size: cover;
   background-position-y: 75%;
-  -webkit-animation: fadeInImg 1.3s ease-in-out 0s forwards;
-          animation: fadeInImg 1.3s ease-in-out 0s forwards;
+  -webkit-animation: fadeInImg1 1.3s ease-in-out 0s forwards;
+          animation: fadeInImg1 1.3s ease-in-out 0s forwards;
 }
 
-@-webkit-keyframes fadeInImg {
+@-webkit-keyframes fadeInImg1 {
   0% {
     -webkit-clip-path: polygon(0 14%, 100% 0, 100% 100%, 0 100%);
             clip-path: polygon(0 14%, 100% 0, 100% 100%, 0 100%);
@@ -232,7 +232,7 @@ a:hover {
   }
 }
 
-@keyframes fadeInImg {
+@keyframes fadeInImg1 {
   0% {
     -webkit-clip-path: polygon(0 14%, 100% 0, 100% 100%, 0 100%);
             clip-path: polygon(0 14%, 100% 0, 100% 100%, 0 100%);
@@ -246,6 +246,54 @@ a:hover {
   100% {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 86%, 0 100%);
             clip-path: polygon(0 0, 100% 0, 100% 86%, 0 100%);
+    opacity: 1;
+  }
+}
+
+.main__section--cover-photo-2 {
+  margin: 1rem 0 0 0;
+  width: 100%;
+  height: 68vh;
+  background-image: url("/app/images/the-lobster-photo-2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: 30%;
+  -webkit-animation: fadeInImg2 1.3s ease-in-out 0s forwards;
+          animation: fadeInImg2 1.3s ease-in-out 0s forwards;
+}
+
+@-webkit-keyframes fadeInImg2 {
+  0% {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 86%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 86%);
+    opacity: 0;
+  }
+  50% {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 86%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 86%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-clip-path: polygon(0 0, 100% 14%, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 14%, 100% 100%, 0 100%);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInImg2 {
+  0% {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 86%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 86%);
+    opacity: 0;
+  }
+  50% {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 86%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 86%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-clip-path: polygon(0 0, 100% 14%, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 14%, 100% 100%, 0 100%);
     opacity: 1;
   }
 }
@@ -257,50 +305,13 @@ a:hover {
 
 .main__section--hero > p {
   margin: 0 0 .5rem 0;
-  font-size: 1.25rem;
   color: #f6f4f1;
-  font-weight: 600;
   text-shadow: .125rem .125rem 0 #00000020;
-  opacity: 0;
-  animation: fadeInUp 1s ease-in-out 0s forwards;
-  -webkit-animation: fadeInUp 1s ease-in-out 0s forwards;
-}
-
-.main__section--hero > h1 {
-  margin: 0;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 4.25rem;
-  color: #202020;
-  text-transform: uppercase;
-  text-shadow: .125rem .125rem 0 #f6f4f1;
-  opacity: 0;
-  animation: fadeInUp 1s ease-in-out 0s forwards;
-  -webkit-animation: fadeInUp 1s ease-in-out 0s forwards;
-}
-
-.main__section--hero > h4 {
-  margin: 0;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.875rem;
+  font-size: 1.25rem;
   font-weight: 600;
   opacity: 0;
   animation: fadeInUp 1s ease-in-out 0s forwards;
   -webkit-animation: fadeInUp 1s ease-in-out 0s forwards;
-}
-
-.main__section--hero .first {
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-}
-
-.main__section--hero .second {
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
-}
-
-.main__section--hero .third {
-  -webkit-animation-delay: 2.5s;
-          animation-delay: 2.5s;
 }
 
 @-webkit-keyframes fadeInUp {
@@ -327,6 +338,69 @@ a:hover {
     -webkit-transform: none;
     transform: none;
   }
+}
+
+.main__section--hero > h1 {
+  margin: 0;
+  color: #202020;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 4.25rem;
+  text-transform: uppercase;
+  text-shadow: .25rem .25rem 0 #f6f4f1;
+  opacity: 0;
+  animation: fadeInUp 1s ease-in-out 0s forwards;
+  -webkit-animation: fadeInUp 1s ease-in-out 0s forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.main__section--hero > h4 {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  opacity: 0;
+  animation: fadeInUp 1s ease-in-out 0s forwards;
+  -webkit-animation: fadeInUp 1s ease-in-out 0s forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.main__section--hero .first {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.main__section--hero .second {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+.main__section--hero .third {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
 }
 
 .main__section--header-text > h1 {
@@ -363,7 +437,7 @@ a:hover {
 
 .main__section--text-box-1 {
   padding: 4rem;
-  margin: .625rem;
+  margin: 0.625rem;
   color: #202020;
   font-size: 0.875rem;
   background: #C2B8A3;
@@ -371,7 +445,7 @@ a:hover {
 
 .main__section--text-box-2 {
   padding: 4rem;
-  margin: .625rem;
+  margin: 0.625rem;
   color: #202020;
   font-size: 0.875rem;
   background: #E6DDC6;
