@@ -215,17 +215,12 @@ a:hover {
 }
 
 @-webkit-keyframes fadeInImg1 {
-  0% {
+  from {
     -webkit-clip-path: polygon(0 14%, 100% 0, 100% 100%, 0 100%);
             clip-path: polygon(0 14%, 100% 0, 100% 100%, 0 100%);
     opacity: 0;
   }
-  50% {
-    -webkit-clip-path: polygon(0 14%, 100% 0, 100% 100%, 0 100%);
-            clip-path: polygon(0 14%, 100% 0, 100% 100%, 0 100%);
-    opacity: 0;
-  }
-  100% {
+  to {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 86%, 0 100%);
             clip-path: polygon(0 0, 100% 0, 100% 86%, 0 100%);
     opacity: 1;
@@ -233,17 +228,12 @@ a:hover {
 }
 
 @keyframes fadeInImg1 {
-  0% {
+  from {
     -webkit-clip-path: polygon(0 14%, 100% 0, 100% 100%, 0 100%);
             clip-path: polygon(0 14%, 100% 0, 100% 100%, 0 100%);
     opacity: 0;
   }
-  50% {
-    -webkit-clip-path: polygon(0 14%, 100% 0, 100% 100%, 0 100%);
-            clip-path: polygon(0 14%, 100% 0, 100% 100%, 0 100%);
-    opacity: 0;
-  }
-  100% {
+  to {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 86%, 0 100%);
             clip-path: polygon(0 0, 100% 0, 100% 86%, 0 100%);
     opacity: 1;
@@ -257,8 +247,34 @@ a:hover {
   background-size: cover;
   background-position-y: 30%;
   margin: 1rem 0 0 0;
-  -webkit-clip-path: polygon(0 0, 100% 14%, 100% 100%, 0 100%);
-          clip-path: polygon(0 0, 100% 14%, 100% 100%, 0 100%);
+  -webkit-animation: fadeInImg1 1.3s ease-in-out 0s forwards;
+          animation: fadeInImg1 1.3s ease-in-out 0s forwards;
+}
+
+@-webkit-keyframes fadeInImg2 {
+  from {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 86%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 86%);
+    opacity: 0;
+  }
+  to {
+    -webkit-clip-path: polygon(0 0, 100% 14%, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 14%, 100% 100%, 0 100%);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInImg2 {
+  from {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 86%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 86%);
+    opacity: 0;
+  }
+  to {
+    -webkit-clip-path: polygon(0 0, 100% 14%, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 14%, 100% 100%, 0 100%);
+    opacity: 1;
+  }
 }
 
 .main__section--hero {
