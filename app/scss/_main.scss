@@ -5,16 +5,9 @@
 
     &--cover-photo {
       &-1 {
+        @include cover-photo("/app/images/the-lobster-photo-1.jpg", 75);
+
         margin: 0 0 1rem 0;
-        width: 100%;
-        height: 68vh;
-
-        background: {
-          image: url('/app/images/the-lobster-photo-1.jpg');
-          size: cover;
-          position-y: 75%;
-        }
-
         animation: fadeInImg1 1.3s ease-in-out 0s forwards;
 
         @keyframes fadeInImg1 {
@@ -36,17 +29,9 @@
       }
 
       &-2 {
+        @include cover-photo("/app/images/the-lobster-photo-2.jpg", 30);
+
         margin: 1rem 0 0 0;
-        width: 100%;
-        height: 68vh;
-
-        background: {
-          image: url('/app/images/the-lobster-photo-2.jpg');
-          size: cover;
-          repeat: no-repeat;
-          position-y: 30%;
-        }
-
         animation: fadeInImg2 1.3s ease-in-out 0s forwards;
 
         @keyframes fadeInImg2 {
@@ -70,7 +55,6 @@
 
     &--hero {
       padding-left: 11.25rem;
-      line-height: 1;
 
       >p {
         margin: 0 0 .5rem 0;
@@ -104,6 +88,8 @@
 
       >h4 {
         margin: 0;
+        color: #f6f4f1;
+        text-shadow: .125rem .125rem 0 #00000020;
 
         font: {
           family: 'Montserrat', sans-serif;
