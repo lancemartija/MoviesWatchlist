@@ -4,32 +4,66 @@
     margin: auto;
 
     &--cover-photo {
-      margin: 0 0 1rem 0;
-      width: 100%;
-      height: 68vh;
+      &-1 {
+        margin: 0 0 1rem 0;
+        width: 100%;
+        height: 68vh;
 
-      background: {
-        image: url('/app/images/the-lobster-photo.jpg');
-        size: cover;
-        position-y: 75%;
+        background: {
+          image: url('/app/images/the-lobster-photo-1.jpg');
+          size: cover;
+          position-y: 75%;
+        }
+
+        animation: fadeInImg1 1.3s ease-in-out 0s forwards;
+
+        @keyframes fadeInImg1 {
+          0% {
+            clip-path: polygon(0 14%, 100% 0, 100% 100%, 0 100%);
+            opacity: 0;
+          }
+
+          50% {
+            clip-path: polygon(0 14%, 100% 0, 100% 100%, 0 100%);
+            opacity: 0;
+          }
+
+          100% {
+            clip-path: polygon(0 0, 100% 0, 100% 86%, 0 100%);
+            opacity: 1;
+          }
+        }
       }
 
-      animation: fadeInImg 1.3s ease-in-out 0s forwards;
+      &-2 {
+        margin: 1rem 0 0 0;
+        width: 100%;
+        height: 68vh;
 
-      @keyframes fadeInImg{
-        0% {
-          clip-path: polygon(0 14%, 100% 0, 100% 100%, 0 100%);
-          opacity: 0;
+        background: {
+          image: url('/app/images/the-lobster-photo-2.jpg');
+          size: cover;
+          repeat: no-repeat;
+          position-y: 30%;
         }
 
-        50% {
-          clip-path: polygon(0 14%, 100% 0, 100% 100%, 0 100%);
-          opacity: 0;
-        }
+        animation: fadeInImg2 1.3s ease-in-out 0s forwards;
 
-        100% {
-          clip-path: polygon(0 0, 100% 0, 100% 86%, 0 100%);
-          opacity: 1;
+        @keyframes fadeInImg2 {
+          0% {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 86%);
+            opacity: 0;
+          }
+
+          50% {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 86%);
+            opacity: 0;
+          }
+
+          100% {
+            clip-path: polygon(0 0, 100% 14%, 100% 100%, 0 100%);
+            opacity: 1;
+          }
         }
       }
     }
@@ -40,35 +74,44 @@
 
       >p {
         margin: 0 0 .5rem 0;
-        font-size: $font-lg;
         color: #f6f4f1;
-        font-weight: 600;
         text-shadow: .125rem .125rem 0 #00000020;
-        opacity: 0;
-        animation: fadeInUp 1s ease-in-out 0s forwards;
-        -webkit-animation: fadeInUp 1s ease-in-out 0s forwards;
+
+        font: {
+          size: $font-lg;
+          weight: 600;
+        }
+
+        @include text-animation-fade-in-up;
       }
 
       >h1 {
         margin: 0;
-        font-family: 'Montserrat', sans-serif;
-        font-size: $font-xlg + 1rem;
         color: #202020;
-        text-transform: uppercase;
-        text-shadow: .125rem .125rem 0 #f6f4f1;
-        opacity: 0;
-        animation: fadeInUp 1s ease-in-out 0s forwards;
-        -webkit-animation: fadeInUp 1s ease-in-out 0s forwards;
+
+        font: {
+          family: 'Montserrat', sans-serif;
+          size: $font-xlg + 1rem;
+        }
+
+        text: {
+          transform: uppercase;
+          shadow: .25rem .25rem 0 #f6f4f1;
+        }
+
+        @include text-animation-fade-in-up;
       }
 
       >h4 {
         margin: 0;
-        font-family: 'Montserrat', sans-serif;
-        font-size: $font-sm;
-        font-weight: 600;
-        opacity: 0;
-        animation: fadeInUp 1s ease-in-out 0s forwards;
-        -webkit-animation: fadeInUp 1s ease-in-out 0s forwards;
+
+        font: {
+          family: 'Montserrat', sans-serif;
+          size: $font-sm;
+          weight: 600;
+        }
+
+        @include text-animation-fade-in-up;
       }
 
       .first {
@@ -76,25 +119,11 @@
       }
 
       .second {
-        animation-delay: 2s;
+        animation-delay: 1.5s;
       }
 
       .third {
-        animation-delay: 2.5s;
-      }
-
-      @keyframes fadeInUp {
-        from { 
-          opacity: 0;
-          -webkit-transform: translate3d(0, 100%, 0);
-          transform: translate3d(0, 100%, 0);
-        }
-      
-        to {
-          opacity: 1;
-          -webkit-transform: none;
-          transform: none;
-        }
+        animation-delay: 2s;
       }
     }
 
@@ -133,16 +162,16 @@
     }
 
     &--text-box-1 {
-      padding: 4rem;
-      margin: .625rem;
+      @include padding-margin-all(4, .625);
+
       color: #202020;
       font-size: $font-sm;
       background: $cp3;
     }
 
     &--text-box-2 {
-      padding: 4rem;
-      margin: .625rem;
+      @include padding-margin-all(4, .625);
+
       color: #202020;
       font-size: $font-sm;
       background: $cp2;
