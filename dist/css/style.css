@@ -36,6 +36,11 @@ a:hover {
   text-decoration: none;
 }
 
+.g-max-width {
+  max-width: 85rem;
+  margin: auto;
+}
+
 .flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -80,11 +85,6 @@ a:hover {
 .grid-tmp-cols {
   -ms-grid-columns: 240px 240px;
       grid-template-columns: 240px 240px;
-}
-
-.header {
-  max-width: 85rem;
-  margin: auto;
 }
 
 .header__title {
@@ -199,8 +199,7 @@ a:hover {
 }
 
 .main__section {
-  max-width: 85rem;
-  margin: auto;
+  margin: auto auto 5rem auto;
 }
 
 .main__section--cover-photo-1 {

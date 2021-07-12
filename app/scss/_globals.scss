@@ -29,6 +29,12 @@ a:hover {
   text-decoration: none;
 }
 
+// global max-width
+.g-max-width {
+  max-width: 85rem;
+  margin: auto;
+}
+
 // flexbox
 .flex {
   display: flex;
