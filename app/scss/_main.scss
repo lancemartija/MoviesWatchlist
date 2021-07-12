@@ -18,6 +18,15 @@
 
       @keyframes fadeInImg{
         0% {
+          opacity: 0;
+        }
+
+        1% {
+          clip-path: polygon(0 14%, 100% 0, 100% 100%, 0 100%);
+          opacity: 0;
+        }
+
+        50% {
           clip-path: polygon(0 14%, 100% 0, 100% 100%, 0 100%);
           opacity: 0;
         }
@@ -75,7 +84,7 @@
       }
 
       .third {
-        animation-delay: 2s;
+        animation-delay: 1.6s;
       }
 
       @keyframes fadeInUp {
