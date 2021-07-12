@@ -210,15 +210,12 @@ a:hover {
   background-image: url("/app/images/the-lobster-photo.jpg");
   background-size: cover;
   background-position-y: 75%;
-  -webkit-animation: fadeInImg 1s ease-in-out 0s forwards;
-          animation: fadeInImg 1s ease-in-out 0s forwards;
+  -webkit-animation: fadeInImg 1.3s ease-in-out 0s forwards;
+          animation: fadeInImg 1.3s ease-in-out 0s forwards;
 }
 
 @-webkit-keyframes fadeInImg {
   0% {
-    opacity: 0;
-  }
-  1% {
     -webkit-clip-path: polygon(0 14%, 100% 0, 100% 100%, 0 100%);
             clip-path: polygon(0 14%, 100% 0, 100% 100%, 0 100%);
     opacity: 0;
@@ -237,9 +234,6 @@ a:hover {
 
 @keyframes fadeInImg {
   0% {
-    opacity: 0;
-  }
-  1% {
     -webkit-clip-path: polygon(0 14%, 100% 0, 100% 100%, 0 100%);
             clip-path: polygon(0 14%, 100% 0, 100% 100%, 0 100%);
     opacity: 0;
@@ -295,18 +289,18 @@ a:hover {
 }
 
 .main__section--hero .first {
-  -webkit-animation-delay: .3s;
-          animation-delay: .3s;
-}
-
-.main__section--hero .second {
   -webkit-animation-delay: 1s;
           animation-delay: 1s;
 }
 
+.main__section--hero .second {
+  -webkit-animation-delay: 1.3s;
+          animation-delay: 1.3s;
+}
+
 .main__section--hero .third {
-  -webkit-animation-delay: 1.6s;
-          animation-delay: 1.6s;
+  -webkit-animation-delay: 2.6s;
+          animation-delay: 2.6s;
 }
 
 @-webkit-keyframes fadeInUp {
