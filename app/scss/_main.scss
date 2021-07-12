@@ -11,17 +11,12 @@
         animation: fadeInImg1 1.3s ease-in-out 0s forwards;
 
         @keyframes fadeInImg1 {
-          0% {
+          from {
             clip-path: polygon(0 14%, 100% 0, 100% 100%, 0 100%);
             opacity: 0;
           }
 
-          50% {
-            clip-path: polygon(0 14%, 100% 0, 100% 100%, 0 100%);
-            opacity: 0;
-          }
-
-          100% {
+          to {
             clip-path: polygon(0 0, 100% 0, 100% 86%, 0 100%);
             opacity: 1;
           }
@@ -32,7 +27,19 @@
         @include cover-photo("/app/images/the-lobster-photo-2.jpg", 30);
 
         margin: 1rem 0 0 0;
-        clip-path: polygon(0 0, 100% 14%, 100% 100%, 0 100%);
+        animation: fadeInImg1 1.3s ease-in-out 0s forwards;
+
+        @keyframes fadeInImg2 {
+          from {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 86%);
+            opacity: 0;
+          }
+
+          to {
+            clip-path: polygon(0 0, 100% 14%, 100% 100%, 0 100%);
+            opacity: 1;
+          }
+        }
       }
     }
 
