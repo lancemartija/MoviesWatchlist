@@ -32,24 +32,7 @@
         @include cover-photo("/app/images/the-lobster-photo-2.jpg", 30);
 
         margin: 1rem 0 0 0;
-        animation: fadeInImg2 1.3s ease-in-out 0s forwards;
-
-        @keyframes fadeInImg2 {
-          0% {
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 86%);
-            opacity: 0;
-          }
-
-          50% {
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 86%);
-            opacity: 0;
-          }
-
-          100% {
-            clip-path: polygon(0 0, 100% 14%, 100% 100%, 0 100%);
-            opacity: 1;
-          }
-        }
+        clip-path: polygon(0 0, 100% 14%, 100% 100%, 0 100%);
       }
     }
 
@@ -64,6 +47,7 @@
         font: {
           size: $font-lg;
           weight: 600;
+          style: italic;
         }
 
         @include text-animation-fade-in-up;
@@ -147,7 +131,7 @@
       }
     }
 
-    &--text-box-1 {
+    &--card-1 {
       @include padding-margin-all(4, .625);
 
       color: #202020;
@@ -155,7 +139,7 @@
       background: $cp3;
     }
 
-    &--text-box-2 {
+    &--card-2 {
       @include padding-margin-all(4, .625);
 
       color: #202020;
