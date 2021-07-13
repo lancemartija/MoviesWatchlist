@@ -252,26 +252,26 @@ a:hover {
 
 @-webkit-keyframes fadeInImg2 {
   from {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 86%);
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 86%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     opacity: 0;
   }
   to {
-    -webkit-clip-path: polygon(0 0, 100% 14%, 100% 100%, 0 100%);
-            clip-path: polygon(0 0, 100% 14%, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 14%, 100% 100%, 0 86%);
+            clip-path: polygon(0 0, 100% 14%, 100% 100%, 0 86%);
     opacity: 1;
   }
 }
 
 @keyframes fadeInImg2 {
   from {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 86%);
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 86%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     opacity: 0;
   }
   to {
-    -webkit-clip-path: polygon(0 0, 100% 14%, 100% 100%, 0 100%);
-            clip-path: polygon(0 0, 100% 14%, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 14%, 100% 100%, 0 86%);
+            clip-path: polygon(0 0, 100% 14%, 100% 100%, 0 86%);
     opacity: 1;
   }
 }
@@ -442,8 +442,8 @@ a:hover {
   text-shadow: .125rem .125rem 0 #00000020;
   margin-left: 11.25rem;
   line-height: 1.5;
-  -webkit-transform: translateY(20px);
-          transform: translateY(20px);
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
 }
 
 .main .dim {
