@@ -43,7 +43,8 @@
     }
 
     &--hero {
-      padding-left: 11.25rem;
+      margin-left: 11.25rem;
+      transform: translateY(-30px);
 
       >p {
         margin: 0 0 .5rem 0;
@@ -152,6 +153,29 @@
       font-size: $font-sm;
       background: $cp2;
     }
+
+    &--movie-quote {
+      font: {
+        family: 'Montserrat', sans-serif;
+        size: $font-lg;
+        weight: 400;
+      }
+
+      color: $cp1;
+      width: 25rem;
+      text-shadow: .125rem .125rem 0 #00000020;
+      margin-left: 11.25rem;
+      line-height: 1.5;
+      transform: translateY(20px);
+    }
+  }
+
+  .dim {
+    background:rgba(0, 0, 0, 0.15);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
   }
 
   .box {
