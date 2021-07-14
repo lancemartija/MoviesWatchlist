@@ -87,48 +87,14 @@ a:hover {
       grid-template-columns: 240px 240px;
 }
 
-.header__title {
-  /*.typewriter {
-      overflow: hidden;
-      border-right: .3rem solid $cp4;
-      white-space: nowrap;
-      margin: 2.5rem auto;
-      animation:
-        typing 2.5s steps(24, end),
-        blink-caret .75s step-end infinite;
-
-      @keyframes typing {
-        from {
-          width: 0
-        }
-
-        to {
-          width: 100%
-        }
-      }
-
-      @keyframes blink-caret {
-
-        from,
-        to {
-          border-color: transparent
-        }
-
-        50% {
-          border-color: $cp4;
-        }
-      }
-    }*/
-}
-
-.header__title > h1 {
+.header__page-title > h1 {
   color: #A19882;
   font-size: 2.625rem;
   text-shadow: .3125rem .3125rem 0 #00000020;
   letter-spacing: .375rem;
 }
 
-.header__title > h1 > span {
+.header__page-title > h1 > span {
   display: inline-block;
   position: relative;
   padding: .125rem;
