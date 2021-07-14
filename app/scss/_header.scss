@@ -1,9 +1,8 @@
 .header {
-  &__page-title {
+  &--page-title {
     >h1 {
       color: $cp4;
-      font-size: $font-xlg - .625rem;
-      text-shadow: .3125rem .3125rem 0 #00000020;
+      font-size: $font-lg + 1rem;
       letter-spacing: .375rem;
 
       &>span {
@@ -16,8 +15,6 @@
         border: .125rem solid {
           radius: 100%;
         }
-
-        box-shadow: .3125rem .3125rem 0 #00000020;
       }
     }
   }
