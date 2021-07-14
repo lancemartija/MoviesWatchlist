@@ -57,7 +57,7 @@
           style: italic;
         }
 
-        @include text-animation-fade-in-up;
+        @include animation-fade-in-up;
       }
 
       >h1 {
@@ -74,7 +74,7 @@
           shadow: .25rem .25rem 0 $default-white;
         }
 
-        @include text-animation-fade-in-up;
+        @include animation-fade-in-up;
       }
 
       >h4 {
@@ -88,19 +88,7 @@
           weight: 600;
         }
 
-        @include text-animation-fade-in-up;
-      }
-
-      .first {
-        animation-delay: 1s;
-      }
-
-      .second {
-        animation-delay: 1.5s;
-      }
-
-      .third {
-        animation-delay: 2s;
+        @include animation-fade-in-up;
       }
     }
 
@@ -182,6 +170,42 @@
       margin-left: 11.25rem;
       line-height: 1.5;
       transform: translateY(-20px);
+    }
+  }
+
+  .first {
+    animation-delay: 1s;
+  }
+
+  .second {
+    animation-delay: 1.5s;
+  }
+
+  .third {
+    animation-delay: 2s;
+  }
+
+  .btn {
+    position: absolute;
+
+    >button {
+      @include padding-margin-all("20px 30px", "30px 0 0 0");
+
+      font: {
+        family: 'Montserrat', sans-serif;
+        weight: 400;
+      }
+
+      color: $cp4;
+      background: rgba($color: $cp1, $alpha: .75);
+      border: 2px solid $cp4;
+      cursor: pointer;
+
+      @include animation-fade-in-up;
+    }
+
+    .fourth {
+      animation-delay: 2.5s;
     }
   }
 
