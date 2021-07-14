@@ -334,21 +334,6 @@ a:hover {
   }
 }
 
-.main__section--hero .first {
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-}
-
-.main__section--hero .second {
-  -webkit-animation-delay: 1.5s;
-          animation-delay: 1.5s;
-}
-
-.main__section--hero .third {
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
-}
-
 .main__section--content-title {
   font-size: 2rem;
   color: #202020;
@@ -439,6 +424,57 @@ a:hover {
   line-height: 1.5;
   -webkit-transform: translateY(-20px);
           transform: translateY(-20px);
+}
+
+.main .first {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.main .second {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+.main .third {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.main .btn {
+  position: absolute;
+}
+
+.main .btn > button {
+  padding: 20px 30px;
+  margin: 30px 0 0 0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  color: #A19882;
+  background: rgba(254, 247, 220, 0.75);
+  border: 2px solid #A19882;
+  cursor: pointer;
+  opacity: 0;
+  animation: fadeInUp 1s ease-in-out 0s forwards;
+  -webkit-animation: fadeInUp 1s ease-in-out 0s forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.main .btn .fourth {
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
 }
 
 .main .dim {
