@@ -104,54 +104,69 @@
       }
     }
 
-    &--header-text {
-      >h1 {
-        font-size: $font-xlg - 1.25rem;
-        color: #202020;
+    &--content-title {
+      font-size: $font-xlg - 1.25rem;
+      color: #202020;
+      letter-spacing: .625rem;
+      text-transform: uppercase;
 
-        text: {
-          transform: uppercase;
-          shadow: .1875rem .1875rem 0 #00000020;
-        }
+      &::before {
+        content: " ";
+        position: absolute;
+        width: 120px;
+        height: 2px;
+        background-color: #202020;
+        transform: translate(-140px, 18px);
+      }
 
-        letter-spacing: .625rem;
-
-        &::before {
-          content: " ";
-          position: absolute;
-          width: 120px;
-          height: 2px;
-          background-color: #202020;
-          transform: translate(-140px, 18px);
-          box-shadow: .1875rem .1875rem 0 #00000020;
-        }
-
-        &::after {
-          content: " ";
-          position: absolute;
-          width: 120px;
-          height: 2px;
-          background-color: #202020;
-          transform: translate(10px, 18px);
-          box-shadow: .1875rem .1875rem 0 #00000020;
-        }
+      &::after {
+        content: " ";
+        position: absolute;
+        width: 120px;
+        height: 2px;
+        background-color: #202020;
+        transform: translate(10px, 18px);
       }
     }
 
     &--card-1 {
-      @include padding-margin-all(4, .625);
+      @include card-style("3rem 2rem", "0 1rem 0 0", #202020, $font-sm, $cp1);
 
-      color: #202020;
-      font-size: $font-sm;
-      background: $cp3;
+      &:is(:nth-last-child(1)) {
+        margin-right: 0;
+      }
     }
 
     &--card-2 {
-      @include padding-margin-all(4, .625);
+      @include card-style("3rem 2rem", "0 1rem 0 0", #202020, $font-sm, $cp2);
 
-      color: #202020;
-      font-size: $font-sm;
-      background: $cp2;
+      &:is(:nth-last-child(1)) {
+        margin-right: 0;
+      }
+    }
+
+    &--card-3 {
+      @include card-style("3rem 2rem", "0 1rem 0 0", #202020, $font-sm, $cp3);
+
+      &:is(:nth-last-child(1)) {
+        margin-right: 0;
+      }
+    }
+
+    &--card-4 {
+      @include card-style("3rem 2rem", "0 1rem 0 0", #202020, $font-sm, $cp4);
+
+      &:is(:nth-last-child(1)) {
+        margin-right: 0;
+      }
+    }
+
+    &--rating-container {
+      >span {
+        &:not(:nth-last-child(1)) {
+          margin-right: .5rem;
+        }
+      }
     }
 
     &--movie-quote {
