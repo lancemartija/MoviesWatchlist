@@ -44,17 +44,27 @@
 
     &--hero {
       margin-left: 11.25rem;
-      transform: translateY(-30px);
+      transform: translateY(-50px);
 
       >p {
-        margin: 0 0 .5rem 0;
+        position: absolute;
+        padding: .1875rem .625rem;
         color: $default-white;
         text-shadow: .125rem .125rem 0 #00000020;
+        top: -42px;
+
+        border: 2px solid $default-white {
+          radius: 1.875rem;
+        }
 
         font: {
-          size: $font-lg;
+          size: $font-sm;
           weight: 600;
           style: italic;
+        }
+
+        &:is(:nth-child(2)) {
+          left: 135px;
         }
 
         @include animation-fade-in-up;
@@ -71,7 +81,7 @@
 
         text: {
           transform: uppercase;
-          shadow: .25rem .25rem 0 $default-white;
+          shadow: .25rem .25rem 0 $cp1;
         }
 
         @include animation-fade-in-up;
@@ -187,21 +197,32 @@
 
   .btn {
     position: absolute;
+    transition: opacity .2s ease-in-out;
+
+    &:hover {
+      opacity: .7;
+    }
 
     >button {
-      @include padding-margin-all("20px 30px", "30px 0 0 0");
+      @include padding-margin-all(".9375rem 1.5625rem", "1.875rem 0 0 0");
 
       font: {
         family: 'Montserrat', sans-serif;
-        weight: 400;
+        weight: 600;
       }
 
       color: $cp4;
-      background: rgba($color: $cp1, $alpha: .75);
-      border: 2px solid $cp4;
+      background-color: $cp1;
+      border: none;
+      box-shadow: 0 .5rem 1.5rem #00000015;
       cursor: pointer;
+      border-radius: .3125rem;
 
       @include animation-fade-in-up;
+
+      >span {
+        margin-left: .75rem;
+      }
     }
 
     .fourth {
