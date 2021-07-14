@@ -20,17 +20,24 @@
 }
 
 @mixin padding-margin-all($p, $m) {
-  padding: $p * 1rem;
-  margin: $m * 1rem;
+  padding: #{$p};
+  margin: #{$m};
 }
 
 @mixin cover-photo($url, $pos-y) {
   width: 100%;
-  height: 68vh;
+  height: 40rem;
 
   background: {
     image: url('#{$url}');
     size: cover;
     position-y: $pos-y * 1%;
   }
+}
+
+@mixin card-style($padding, $margin, $c, $fs, $bg) {
+  @include padding-margin-all($padding, $margin);
+  color: $c;
+  font-size: $fs;
+  background: $bg;
 }
