@@ -21,11 +21,11 @@
 <body>
   <header class="header g-max-width">
     <nav class="flex flex-ai-c flex-jc-sb">
-      <a href="#" class="header__page-title">
+      <a href="#" class="header--page-title">
         <h1>// movies<span></span>watchlist</h1>
       </a>
       <div class="header__links">
-        <a href="#" class="header__links--active">Home</a><a href="#">About</a><a href="#">Watchlist</a><a
+        <a href="#" class="header__links--active">Home</a><a href="#about">About</a><a href="#">Watchlist</a><a
           href="#">Contacts</a>
       </div>
     </nav>
@@ -39,29 +39,57 @@
       </div>
     </section>
     <section class="main__section g-max-width">
-      <div class="main__section--header-text flex flex-ai-c flex-jc-c">
-        <h1>Reviews</h1>
+      <div class="flex flex-ai-c flex-jc-c">
+        <h1 class="main__section--content-title">Reviews</h1>
       </div>
       <div class="grid grid-tmp-cols-auto-fit">
-        <div class="main__section--card-1 box flex flex-fd-col">
+        <div class="main__section--card-2 box flex flex-fd-col">
           <p>&#x201C;Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, nostrum! Quis asperiores
             pariatur neque.&#8221;</p>
           <h4>Lorem ipsum</h4>
+          <div class="main__section--rating-container flex">
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+          </div>
         </div>
         <div class="main__section--card-2 box flex flex-fd-col">
           <p>&#x201C;Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, repudiandae.&#8221;</p>
           <h4>Lorem ipsum</h4>
+          <div class="main__section--rating-container flex">
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star-half-o"></span>
+          </div>
         </div>
-        <div class="main__section--card-1 box flex flex-fd-col">
+        <div class="main__section--card-2 box flex flex-fd-col">
           <p>&#x201C;Lorem ipsum dolor sit amet consectetur adipisicing elit. At minima repellat eos reprehenderit!
             Esse,
             tempora.&#8221;</p>
           <h4>Lorem ipsum</h4>
+          <div class="main__section--rating-container flex">
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star-o"></span>
+          </div>
         </div>
         <div class="main__section--card-2 box flex flex-fd-col">
           <p>&#x201C;Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus quibusdam accusantium sequi
             libero temporibus dolore magni velit.&#8221;</p>
           <h4>Lorem ipsum</h4>
+          <div class="main__section--rating-container flex">
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star-o"></span>
+          </div>
         </div>
       </div>
     </section>
@@ -74,15 +102,32 @@
           would be absurd.&#8221;</h3>
       </div>
     </section>
-    <section>
-      <!--contains list of production crew and actors-->
+    <section class="main__section g-max-width">
+      <div class="flex flex-ai-c flex-fd-col">
+        <h1 id="about" class="main__section--content-title">About</h1>
+        <div class="main__section--card-2 box">
+          <h1>Synopsis</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod ipsum, sapiente et assumenda porro tempore
+            odio
+            voluptatibus, sunt expedita sint vero deserunt ut hic quibusdam? Eius explicabo impedit tempora saepe.
+            Consequuntur assumenda aliquam debitis, nulla illum quia at, aperiam quis impedit repellendus itaque.
+            Aliquam
+            quod aspernatur illo velit atque quam expedita possimus ducimus provident eos? Deleniti dolor fuga quae
+            facere?
+            Enim fugiat magni veniam rem assumenda? Unde dolorem delectus earum nihil dignissimos. Fugiat rem numquam
+            est
+            nostrum, culpa vel tenetur deleniti ratione commodi, atque iusto esse expedita explicabo aspernatur
+            corporis!
+          </p>
+        </div>
+      </div>
     </section>
   </main>
   <footer class="footer flex flex-jc-c">
     <div class="footer__content g-max-width">
       <div class="footer__content--socials flex flex-jc-c">
-        <a href="#" class="fa fa-github"></a><a href="#" class="fa fa-facebook"></a><a href="#"
-          class="fa fa-instagram"></a><a href="#" class="fa fa-twitter"></a>
+        <a href="https://github.com/lancemartija" target="_blank" class="fa fa-github"></a><a href="#"
+          class="fa fa-facebook"></a><a href="#" class="fa fa-instagram"></a><a href="#" class="fa fa-twitter"></a>
       </div>
       <h6>Movies Watchlist by Lance Martija &#169; 2021 All rights reserved</h6>
     </div>
