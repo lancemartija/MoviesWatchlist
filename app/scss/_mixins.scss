@@ -1,5 +1,4 @@
-// fade in up animation for hero
-@mixin text-animation-fade-in-up {
+@mixin animation-fade-in-up {
   opacity: 0;
   animation: fadeInUp 1s ease-in-out 0s forwards;
   -webkit-animation: fadeInUp 1s ease-in-out 0s forwards;
