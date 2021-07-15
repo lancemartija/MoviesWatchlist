@@ -52,8 +52,10 @@
         color: $default-white;
         text-shadow: .125rem .125rem 0 #00000020;
         top: -42px;
+        transition: all .2s ease-in-out;
+        cursor: pointer;
 
-        border: 2px solid $default-white {
+        border: .125rem solid $default-white {
           radius: 1.875rem;
         }
 
@@ -68,11 +70,17 @@
         }
 
         @include animation-fade-in-up;
+
+        &:hover {
+          border: .125rem solid $cp1;
+          color: $cp2;
+        }
       }
 
       >h1 {
         margin: 0;
         color: #202020;
+        cursor: default;
 
         font: {
           family: 'Montserrat', sans-serif;
@@ -88,9 +96,10 @@
       }
 
       >h4 {
-        margin: 0;
+        margin: 0 0 1.875rem 0;
         color: $default-white;
         text-shadow: .125rem .125rem 0 #00000020;
+        cursor: default;
 
         font: {
           family: 'Montserrat', sans-serif;
@@ -99,6 +108,41 @@
         }
 
         @include animation-fade-in-up;
+      }
+    }
+
+    &--btn {
+      position: absolute;
+      transition: opacity .2s ease-in-out;
+
+      &:hover {
+        opacity: .7;
+      }
+
+      >button {
+        padding: .9375rem 1.5625rem;
+
+        font: {
+          family: 'Montserrat', sans-serif;
+          weight: 600;
+        }
+
+        color: $cp4;
+        background-color: $cp1;
+        border: none;
+        box-shadow: 0 .5rem 1.5rem #00000015;
+        cursor: pointer;
+        border-radius: .3125rem;
+
+        @include animation-fade-in-up;
+
+        >span {
+          margin-left: .75rem;
+        }
+      }
+
+      .fourth {
+        animation-delay: 2.5s;
       }
     }
 
@@ -193,41 +237,6 @@
 
   .third {
     animation-delay: 2s;
-  }
-
-  .btn {
-    position: absolute;
-    transition: opacity .2s ease-in-out;
-
-    &:hover {
-      opacity: .7;
-    }
-
-    >button {
-      @include padding-margin-all(".9375rem 1.5625rem", "1.875rem 0 0 0");
-
-      font: {
-        family: 'Montserrat', sans-serif;
-        weight: 600;
-      }
-
-      color: $cp4;
-      background-color: $cp1;
-      border: none;
-      box-shadow: 0 .5rem 1.5rem #00000015;
-      cursor: pointer;
-      border-radius: .3125rem;
-
-      @include animation-fade-in-up;
-
-      >span {
-        margin-left: .75rem;
-      }
-    }
-
-    .fourth {
-      animation-delay: 2.5s;
-    }
   }
 
   .dim {
