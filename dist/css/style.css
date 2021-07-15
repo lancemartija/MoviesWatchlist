@@ -252,7 +252,10 @@ a:hover {
   color: #f6f4f1;
   text-shadow: .125rem .125rem 0 #00000020;
   top: -42px;
-  border: 2px solid #f6f4f1;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  cursor: pointer;
+  border: 0.125rem solid #f6f4f1;
   border-radius: 1.875rem;
   font-size: 0.875rem;
   font-weight: 600;
@@ -292,9 +295,15 @@ a:hover {
   }
 }
 
+.main__section--hero > p:hover {
+  border: 0.125rem solid #FEF7DC;
+  color: #E6DDC6;
+}
+
 .main__section--hero > h1 {
   margin: 0;
   color: #202020;
+  cursor: default;
   font-family: 'Montserrat', sans-serif;
   font-size: 4.25rem;
   text-transform: uppercase;
@@ -318,9 +327,10 @@ a:hover {
 }
 
 .main__section--hero > h4 {
-  margin: 0;
+  margin: 0 0 1.875rem 0;
   color: #f6f4f1;
   text-shadow: .125rem .125rem 0 #00000020;
+  cursor: default;
   font-family: 'Montserrat', sans-serif;
   font-size: 0.875rem;
   font-weight: 600;
@@ -340,6 +350,54 @@ a:hover {
     -webkit-transform: none;
     transform: none;
   }
+}
+
+.main__section--btn {
+  position: absolute;
+  -webkit-transition: opacity .2s ease-in-out;
+  transition: opacity .2s ease-in-out;
+}
+
+.main__section--btn:hover {
+  opacity: .7;
+}
+
+.main__section--btn > button {
+  padding: .9375rem 1.5625rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: #A19882;
+  background-color: #FEF7DC;
+  border: none;
+  -webkit-box-shadow: 0 .5rem 1.5rem #00000015;
+          box-shadow: 0 .5rem 1.5rem #00000015;
+  cursor: pointer;
+  border-radius: .3125rem;
+  opacity: 0;
+  animation: fadeInUp 1s ease-in-out 0s forwards;
+  -webkit-animation: fadeInUp 1s ease-in-out 0s forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.main__section--btn > button > span {
+  margin-left: .75rem;
+}
+
+.main__section--btn .fourth {
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
 }
 
 .main__section--content-title {
@@ -447,55 +505,6 @@ a:hover {
 .main .third {
   -webkit-animation-delay: 2s;
           animation-delay: 2s;
-}
-
-.main .btn {
-  position: absolute;
-  -webkit-transition: opacity .2s ease-in-out;
-  transition: opacity .2s ease-in-out;
-}
-
-.main .btn:hover {
-  opacity: .7;
-}
-
-.main .btn > button {
-  padding: .9375rem 1.5625rem;
-  margin: 1.875rem 0 0 0;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  color: #A19882;
-  background-color: #FEF7DC;
-  border: none;
-  -webkit-box-shadow: 0 .5rem 1.5rem #00000015;
-          box-shadow: 0 .5rem 1.5rem #00000015;
-  cursor: pointer;
-  border-radius: .3125rem;
-  opacity: 0;
-  animation: fadeInUp 1s ease-in-out 0s forwards;
-  -webkit-animation: fadeInUp 1s ease-in-out 0s forwards;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 100%, 0);
-    transform: translate3d(0, 100%, 0);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none;
-  }
-}
-
-.main .btn > button > span {
-  margin-left: .75rem;
-}
-
-.main .btn .fourth {
-  -webkit-animation-delay: 2.5s;
-          animation-delay: 2.5s;
 }
 
 .main .dim {
