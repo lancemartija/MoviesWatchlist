@@ -37,7 +37,7 @@ a:hover {
   text-decoration: none;
 }
 
-.g-max-width {
+.content {
   max-width: 85rem;
   margin: auto;
 }
@@ -84,8 +84,8 @@ a:hover {
 }
 
 .grid-tmp-cols {
-  -ms-grid-columns: 240px 240px;
-      grid-template-columns: 240px 240px;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
 }
 
 .dim {
@@ -99,6 +99,28 @@ a:hover {
 .box {
   -webkit-box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
           box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.grow {
+  -webkit-transition: -webkit-transform .1s ease-in-out;
+  transition: -webkit-transform .1s ease-in-out;
+  transition: transform .1s ease-in-out;
+  transition: transform .1s ease-in-out, -webkit-transform .1s ease-in-out;
+  cursor: pointer;
+}
+
+.grow:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.grow:active {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.toggle-display {
+  display: none;
 }
 
 .header--page-title > h1 {
@@ -255,8 +277,8 @@ a:hover {
 
 .main__section--hero {
   margin-left: 11.25rem;
-  -webkit-transform: translateY(-50px);
-          transform: translateY(-50px);
+  -webkit-transform: translateY(-30px);
+          transform: translateY(-30px);
 }
 
 .main__section--hero > p {
@@ -413,14 +435,14 @@ a:hover {
           animation-delay: 2.5s;
 }
 
-.main__section--content-title {
+.main__section--heading {
   font-size: 2rem;
   color: #202020;
   letter-spacing: .625rem;
   text-transform: uppercase;
 }
 
-.main__section--content-title::before {
+.main__section--heading::before {
   content: " ";
   position: absolute;
   width: 120px;
@@ -430,7 +452,7 @@ a:hover {
           transform: translate(-140px, 18px);
 }
 
-.main__section--content-title::after {
+.main__section--heading::after {
   content: " ";
   position: absolute;
   width: 120px;
@@ -440,9 +462,17 @@ a:hover {
           transform: translate(10px, 18px);
 }
 
+.main__section--card-main-container {
+  margin: 1.125rem 0;
+}
+
+.main__section--card-row {
+  margin: 0 0 1rem 0;
+}
+
 .main__section--card-1 {
   padding: 3rem 2rem;
-  margin: 0 1rem 0 0;
+  margin: 0 .5rem;
   color: #202020;
   font-size: 0.875rem;
   background: #FEF7DC;
@@ -452,9 +482,13 @@ a:hover {
   margin-right: 0;
 }
 
+.main__section--card-1:is(:nth-child(1)) {
+  margin-left: 0;
+}
+
 .main__section--card-2 {
   padding: 3rem 2rem;
-  margin: 0 1rem 0 0;
+  margin: 0 .5rem;
   color: #202020;
   font-size: 0.875rem;
   background: #E6DDC6;
@@ -464,9 +498,13 @@ a:hover {
   margin-right: 0;
 }
 
+.main__section--card-2:is(:nth-child(1)) {
+  margin-left: 0;
+}
+
 .main__section--card-3 {
   padding: 3rem 2rem;
-  margin: 0 1rem 0 0;
+  margin: 0 .5rem;
   color: #202020;
   font-size: 0.875rem;
   background: #C2B8A3;
@@ -476,9 +514,13 @@ a:hover {
   margin-right: 0;
 }
 
+.main__section--card-3:is(:nth-child(1)) {
+  margin-left: 0;
+}
+
 .main__section--card-4 {
   padding: 3rem 2rem;
-  margin: 0 1rem 0 0;
+  margin: 0 .5rem;
   color: #202020;
   font-size: 0.875rem;
   background: #A19882;
@@ -488,21 +530,40 @@ a:hover {
   margin-right: 0;
 }
 
+.main__section--card-4:is(:nth-child(1)) {
+  margin-left: 0;
+}
+
 .main__section--rating-container > span:not(:nth-last-child(1)) {
   margin-right: .5rem;
 }
 
 .main__section--movie-quote {
+  border: 2px solid #FEF7DC;
+  padding: 20px;
   font-family: 'Montserrat', sans-serif;
   font-size: 1.25rem;
   font-weight: 400;
   color: #FEF7DC;
-  width: 25rem;
+  width: 32rem;
   text-shadow: .125rem .125rem 0 #00000020;
-  margin-left: 11.25rem;
   line-height: 1.5;
-  -webkit-transform: translateY(-20px);
-          transform: translateY(-20px);
+  -webkit-transform: translate(180px, -25px);
+          transform: translate(180px, -25px);
+}
+
+.main__section--synopsis > p {
+  line-height: 1.5;
+}
+
+.main__section--cast-and-crew > a {
+  color: #202020;
+  font-size: 1.625rem;
+  font-weight: 600;
+}
+
+.main__section--cast-and-crew > a:hover {
+  color: #A19882;
 }
 
 .main .first {
