@@ -31,7 +31,7 @@ a:hover {
 }
 
 // global max-width
-.g-max-width {
+.content {
   max-width: 85rem;
   margin: auto;
 }
@@ -66,7 +66,7 @@ a:hover {
   }
 
   &-tmp-cols {
-    grid-template-columns: 240px 240px;
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
@@ -81,4 +81,21 @@ a:hover {
 
 .box {
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.grow {
+  transition: transform .1s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &:active {
+    transform: scale(1);
+  }
+}
+
+.toggle-display {
+  display: none;
 }
