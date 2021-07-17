@@ -44,7 +44,7 @@
 
     &--hero {
       margin-left: 11.25rem;
-      transform: translateY(-50px);
+      transform: translateY(-30px);
 
       >p {
         position: absolute;
@@ -146,7 +146,7 @@
       }
     }
 
-    &--content-title {
+    &--heading {
       font-size: $font-xlg - 1.25rem;
       color: #202020;
       letter-spacing: .625rem;
@@ -171,35 +171,59 @@
       }
     }
 
+    &--card-main-container {
+      margin: 1.125rem 0;
+    }
+
+    &--card-row {
+      margin: 0 0 1rem 0;
+    }
+
     &--card-1 {
-      @include card-style("3rem 2rem", "0 1rem 0 0", #202020, $font-sm, $cp1);
+      @include card-style("3rem 2rem", "0 .5rem", #202020, $font-sm, $cp1);
 
       &:is(:nth-last-child(1)) {
         margin-right: 0;
+      }
+
+      &:is(:nth-child(1)) {
+        margin-left: 0;
       }
     }
 
     &--card-2 {
-      @include card-style("3rem 2rem", "0 1rem 0 0", #202020, $font-sm, $cp2);
+      @include card-style("3rem 2rem", "0 .5rem", #202020, $font-sm, $cp2);
 
       &:is(:nth-last-child(1)) {
         margin-right: 0;
+      }
+
+      &:is(:nth-child(1)) {
+        margin-left: 0;
       }
     }
 
     &--card-3 {
-      @include card-style("3rem 2rem", "0 1rem 0 0", #202020, $font-sm, $cp3);
+      @include card-style("3rem 2rem", "0 .5rem", #202020, $font-sm, $cp3);
 
       &:is(:nth-last-child(1)) {
         margin-right: 0;
       }
+
+      &:is(:nth-child(1)) {
+        margin-left: 0;
+      }
     }
 
     &--card-4 {
-      @include card-style("3rem 2rem", "0 1rem 0 0", #202020, $font-sm, $cp4);
+      @include card-style("3rem 2rem", "0 .5rem", #202020, $font-sm, $cp4);
 
       &:is(:nth-last-child(1)) {
         margin-right: 0;
+      }
+
+      &:is(:nth-child(1)) {
+        margin-left: 0;
       }
     }
 
@@ -212,6 +236,9 @@
     }
 
     &--movie-quote {
+      border: 2px solid $cp1;
+      padding: 20px;
+
       font: {
         family: 'Montserrat', sans-serif;
         size: $font-lg;
@@ -219,11 +246,31 @@
       }
 
       color: $cp1;
-      width: 25rem;
+      width: 32rem;
       text-shadow: .125rem .125rem 0 #00000020;
-      margin-left: 11.25rem;
       line-height: 1.5;
-      transform: translateY(-20px);
+      transform: translate(180px, -25px);
+    }
+
+    &--synopsis {
+      >p {
+        line-height: 1.5;
+      }
+    }
+
+    &--cast-and-crew {
+      >a {
+        color: #202020;
+
+        font: {
+          size: 1.625rem;
+          weight: 600;
+        }
+
+        &:hover {
+          color: $cp4;
+        }
+      }
     }
   }
 
