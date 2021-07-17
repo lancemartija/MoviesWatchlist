@@ -69,3 +69,16 @@ a:hover {
     grid-template-columns: 240px 240px;
   }
 }
+
+// global styles
+.dim {
+  background: rgba(0, 0, 0, 0.15);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+}
+
+.box {
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
