@@ -467,7 +467,7 @@ a:hover {
           transform: translate(10px, 18px);
 }
 
-.main__section--card-main-container {
+.main__section--card-main-container-1, .main__section--card-main-container-2 {
   margin: 1.125rem 0;
 }
 
@@ -557,46 +557,46 @@ a:hover {
           transform: translate(180px, -25px);
 }
 
-.main__section--synopsis {
-  margin-bottom: 2.5rem;
-}
-
 .main__section--synopsis > p {
   line-height: 1.5;
 }
 
-.main__section--cast-and-crew > a {
+.main__section--cast, .main__section--crew {
+  margin-top: 2.5rem;
+}
+
+.main__section--cast > a, .main__section--crew > a {
   cursor: pointer;
   color: #202020;
   font-size: 1.625rem;
   font-weight: 600;
 }
 
-.main__section--cast-and-crew > a:hover {
+.main__section--cast > a:hover, .main__section--crew > a:hover {
   color: #A19882;
 }
 
-.main__section--cast-and-crew > a:hover::-moz-selection {
-  color: #A19882;
-  background: rgba(0, 0, 0, 0);
-}
-
-.main__section--cast-and-crew > a:hover::selection {
+.main__section--cast > a:hover::-moz-selection, .main__section--crew > a:hover::-moz-selection {
   color: #A19882;
   background: rgba(0, 0, 0, 0);
 }
 
-.main__section--cast-and-crew > a::-moz-selection {
+.main__section--cast > a:hover::selection, .main__section--crew > a:hover::selection {
+  color: #A19882;
+  background: rgba(0, 0, 0, 0);
+}
+
+.main__section--cast > a::-moz-selection, .main__section--crew > a::-moz-selection {
   color: #202020;
   background: rgba(0, 0, 0, 0);
 }
 
-.main__section--cast-and-crew > a::selection {
+.main__section--cast > a::selection, .main__section--crew > a::selection {
   color: #202020;
   background: rgba(0, 0, 0, 0);
 }
 
-.main__section--cast-and-crew > a .fa-chevron-down {
+.main__section--cast > a .fa-chevron-down, .main__section--crew > a .fa-chevron-down {
   margin-left: .625rem;
   font-size: 1.25rem;
 }
