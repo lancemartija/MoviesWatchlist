@@ -281,9 +281,8 @@ a:hover {
 }
 
 .main__section--hero {
-  margin-left: 11.25rem;
-  -webkit-transform: translateY(-30px);
-          transform: translateY(-30px);
+  -webkit-transform: translate(180px, -30px);
+          transform: translate(180px, -30px);
 }
 
 .main__section--hero > p {
