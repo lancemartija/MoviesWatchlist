@@ -141,8 +141,9 @@
         </div>
       </div>
       <div class="main__section--cast-and-crew">
-        <a href="#card-container" onclick="toggleVisibility()">Cast & Crew</a>
-        <div id="card-container" class="main__section--card-main-container">
+        <a onclick="toggleVisibility()">Cast & Crew<span id="chevron" class="fa fa-chevron-down rotate"></span></a>
+        <!--add chevron icon animation-->
+        <div id="card-container" class="main__section--card-main-container toggle-display">
           <div class="main__section--card-row grid grid-tmp-cols">
             <div class="main__section--card-3 box grow"></div>
             <div class="main__section--card-3 box grow"></div>
