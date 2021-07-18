@@ -123,6 +123,11 @@ a:hover {
   display: none;
 }
 
+.rotate {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
 .header--page-title > h1 {
   color: #A19882;
   font-size: 2.25rem;
@@ -552,11 +557,16 @@ a:hover {
           transform: translate(180px, -25px);
 }
 
+.main__section--synopsis {
+  margin-bottom: 2.5rem;
+}
+
 .main__section--synopsis > p {
   line-height: 1.5;
 }
 
 .main__section--cast-and-crew > a {
+  cursor: pointer;
   color: #202020;
   font-size: 1.625rem;
   font-weight: 600;
@@ -564,6 +574,31 @@ a:hover {
 
 .main__section--cast-and-crew > a:hover {
   color: #A19882;
+}
+
+.main__section--cast-and-crew > a:hover::-moz-selection {
+  color: #A19882;
+  background: rgba(0, 0, 0, 0);
+}
+
+.main__section--cast-and-crew > a:hover::selection {
+  color: #A19882;
+  background: rgba(0, 0, 0, 0);
+}
+
+.main__section--cast-and-crew > a::-moz-selection {
+  color: #202020;
+  background: rgba(0, 0, 0, 0);
+}
+
+.main__section--cast-and-crew > a::selection {
+  color: #202020;
+  background: rgba(0, 0, 0, 0);
+}
+
+.main__section--cast-and-crew > a .fa-chevron-down {
+  margin-left: .625rem;
+  font-size: 1.25rem;
 }
 
 .main .first {
