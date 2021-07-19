@@ -168,6 +168,22 @@
         background-color: #202020;
         transform: translate(10px, 18px);
       }
+
+      @include breakpoint-down(medium) {
+        font-size: $font-lg;
+
+        &::before {
+          width: 30px;
+          height: 2px;
+          transform: translate(-50px, 10px);
+        }
+
+        &::after {
+          width: 30px;
+          height: 2px;
+          transform: translate(10px, 10px);
+        }
+      }
     }
 
     &--card-main-container {
@@ -182,6 +198,20 @@
       margin: 0 0 1rem 0;
     }
 
+    %card-mobile-view {
+      @include breakpoint-down(medium) {
+        margin: 0.5rem;
+
+        &:is(:nth-last-child(1)) {
+          margin-right: .5rem;
+        }
+
+        &:is(:nth-child(1)) {
+          margin-left: .5rem;
+        }
+      }
+    }
+
     &--card-1 {
       @include card-style("3rem 2rem", "0 .5rem", #202020, $font-sm, $cp1);
 
@@ -192,6 +222,8 @@
       &:is(:nth-child(1)) {
         margin-left: 0;
       }
+
+      @extend %card-mobile-view;
     }
 
     &--card-2 {
@@ -204,6 +236,8 @@
       &:is(:nth-child(1)) {
         margin-left: 0;
       }
+
+      @extend %card-mobile-view;
     }
 
     &--card-3 {
@@ -216,6 +250,8 @@
       &:is(:nth-child(1)) {
         margin-left: 0;
       }
+
+      @extend %card-mobile-view;
     }
 
     &--card-4 {
@@ -228,6 +264,8 @@
       &:is(:nth-child(1)) {
         margin-left: 0;
       }
+
+      @extend %card-mobile-view;
     }
 
     &--rating-container {
