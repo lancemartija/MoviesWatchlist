@@ -250,14 +250,14 @@ a:hover {
   transition: transform .2s ease-in-out, -webkit-transform .2s ease-in-out;
 }
 
-.header__burger > span {
+.header__burger-menu > span {
   background: #A19882;
   display: block;
   width: 26px;
   height: 3px;
 }
 
-.header__burger > span:not(:nth-last-child(1)) {
+.header__burger-menu > span:not(:nth-last-child(1)) {
   margin-bottom: 5px;
 }
 
