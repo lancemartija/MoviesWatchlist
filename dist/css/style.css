@@ -1,3 +1,10 @@
+@media (max-width: 39.9375em) {
+  body .content {
+    max-width: 18em;
+    margin: auto;
+  }
+}
+
 html, body {
   overflow-x: hidden;
 }
@@ -41,16 +48,14 @@ a:hover {
   text-decoration: none;
 }
 
+.content {
+  max-width: 64em;
+  margin: auto;
+}
+
 @media (max-width: 63.9375em) {
   .content {
     max-width: 30em;
-    margin: auto;
-  }
-}
-
-@media (min-width: 64em) {
-  .content {
-    max-width: 64em;
     margin: auto;
   }
 }
@@ -513,12 +518,42 @@ a:hover {
           transform: translate(10px, 18px);
 }
 
+@media (max-width: 63.9375em) {
+  .main__section--heading {
+    font-size: 1.25rem;
+  }
+  .main__section--heading::before {
+    width: 30px;
+    height: 2px;
+    -webkit-transform: translate(-50px, 10px);
+            transform: translate(-50px, 10px);
+  }
+  .main__section--heading::after {
+    width: 30px;
+    height: 2px;
+    -webkit-transform: translate(10px, 10px);
+            transform: translate(10px, 10px);
+  }
+}
+
 .main__section--card-main-container-1, .main__section--card-main-container-2 {
   margin: 1.125rem 0;
 }
 
 .main__section--card-row {
   margin: 0 0 1rem 0;
+}
+
+@media (max-width: 63.9375em) {
+  .main__section .main__section--card-1, .main__section .main__section--card-2, .main__section .main__section--card-3, .main__section .main__section--card-4 {
+    margin: 0.5rem;
+  }
+  .main__section .main__section--card-1:is(:nth-last-child(1)), .main__section .main__section--card-2:is(:nth-last-child(1)), .main__section .main__section--card-3:is(:nth-last-child(1)), .main__section .main__section--card-4:is(:nth-last-child(1)) {
+    margin-right: .5rem;
+  }
+  .main__section .main__section--card-1:is(:nth-child(1)), .main__section .main__section--card-2:is(:nth-child(1)), .main__section .main__section--card-3:is(:nth-child(1)), .main__section .main__section--card-4:is(:nth-child(1)) {
+    margin-left: .5rem;
+  }
 }
 
 .main__section--card-1 {
