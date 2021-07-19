@@ -38,13 +38,11 @@ a:hover {
 
 // global max-width
 .content {
+  max-width: 64em;
+  margin: auto;
+
   @include breakpoint-down(medium) {
     max-width: 30em;
-    margin: auto;
-  }
-
-  @include breakpoint-up(large) {
-    max-width: 64em;
     margin: auto;
   }
 }
