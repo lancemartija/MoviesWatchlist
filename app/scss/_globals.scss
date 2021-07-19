@@ -1,8 +1,12 @@
+%hide-extra-space {
+  overflow-x: hidden;
+}
+
 html {
   font-size: 100%;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  @extend %hide-extra-space;
 }
 
 *,
@@ -12,6 +16,7 @@ html {
 }
 
 body {
+  @extend %hide-extra-space;
   margin: 0;
   padding: 0;
   background: $default-white;
@@ -33,8 +38,15 @@ a:hover {
 
 // global max-width
 .content {
-  max-width: 64em;
-  margin: auto;
+  @include breakpoint-down(medium) {
+    max-width: 30em;
+    margin: auto;
+  }
+
+  @include breakpoint-up(large) {
+    max-width: 64em;
+    margin: auto;
+  }
 }
 
 .hide-for-mobile {
