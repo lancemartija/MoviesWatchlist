@@ -19,7 +19,6 @@
     }
 
     @include breakpoint-down(medium) {
-
       >h1 {
         font-size: $font-lg;
         letter-spacing: .125rem;
