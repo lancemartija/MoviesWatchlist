@@ -41,6 +41,13 @@ a:hover {
   max-width: 64em;
   margin: auto;
 
+  // 1024px
+  @include breakpoint-down(large) {
+    max-width: 50em;
+    margin: auto;
+  }
+
+  // 640px
   @include breakpoint-down(medium) {
     max-width: 30em;
     margin: auto;
