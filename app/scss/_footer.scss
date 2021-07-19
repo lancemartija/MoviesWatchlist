@@ -4,6 +4,9 @@
 
   &__content {
     >h6 {
+      text-align: center;
+      line-height: 1.5;
+
       font: {
         size: $font-sm;
         weight: 300;
