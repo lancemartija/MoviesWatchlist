@@ -171,6 +171,7 @@
 
       @include breakpoint-down(medium) {
         font-size: $font-lg;
+        letter-spacing: .375rem;
 
         &::before {
           width: 30px;
@@ -201,70 +202,26 @@
     %card-mobile-view {
       @include breakpoint-down(medium) {
         margin: 0.5rem;
-
-        &:is(:nth-last-child(1)) {
-          margin-right: .5rem;
-        }
-
-        &:is(:nth-child(1)) {
-          margin-left: .5rem;
-        }
       }
     }
 
     &--card-1 {
-      @include card-style("3rem 2rem", "0 .5rem", #202020, $font-sm, $cp1);
-
-      &:is(:nth-last-child(1)) {
-        margin-right: 0;
-      }
-
-      &:is(:nth-child(1)) {
-        margin-left: 0;
-      }
-
+      @include card-style("3rem 2rem", ".5rem", #202020, $font-sm, $cp1);
       @extend %card-mobile-view;
     }
 
     &--card-2 {
-      @include card-style("3rem 2rem", "0 .5rem", #202020, $font-sm, $cp2);
-
-      &:is(:nth-last-child(1)) {
-        margin-right: 0;
-      }
-
-      &:is(:nth-child(1)) {
-        margin-left: 0;
-      }
-
+      @include card-style("3rem 2rem", ".5rem", #202020, $font-sm, $cp2);
       @extend %card-mobile-view;
     }
 
     &--card-3 {
-      @include card-style("3rem 2rem", "0 .5rem", #202020, $font-sm, $cp3);
-
-      &:is(:nth-last-child(1)) {
-        margin-right: 0;
-      }
-
-      &:is(:nth-child(1)) {
-        margin-left: 0;
-      }
-
+      @include card-style("3rem 2rem", ".5rem", #202020, $font-sm, $cp3);
       @extend %card-mobile-view;
     }
 
     &--card-4 {
-      @include card-style("3rem 2rem", "0 .5rem", #202020, $font-sm, $cp4);
-
-      &:is(:nth-last-child(1)) {
-        margin-right: 0;
-      }
-
-      &:is(:nth-child(1)) {
-        margin-left: 0;
-      }
-
+      @include card-style("3rem 2rem", ".5rem", #202020, $font-sm, $cp4);
       @extend %card-mobile-view;
     }
 
@@ -296,6 +253,10 @@
     &--synopsis {
       >p {
         line-height: 1.5;
+      }
+
+      @include breakpoint-down(medium) {
+        font-size: $font-sm;
       }
     }
 
@@ -329,6 +290,10 @@
         .fa-chevron-down {
           margin-left: .625rem;
           font-size: 1.25rem;
+        }
+
+        @include breakpoint-down(medium) {
+          font-size: $font-lg;
         }
       }
     }
