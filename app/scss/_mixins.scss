@@ -1,6 +1,11 @@
 // breakpoints
-@media (min-width: 64em) {
-  // styles go here
+body {
+  @media (max-width: 39.9375em) {
+    .content {
+      max-width: 18em;
+      margin: auto;
+    }
+  }
 }
 
 // 640px, 1024px, 1400px
