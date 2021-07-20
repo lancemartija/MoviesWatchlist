@@ -378,16 +378,33 @@ a:hover {
 }
 
 .main__section--hero {
-  -webkit-transform: translate(180px, -30px);
-          transform: translate(180px, -30px);
+  -webkit-transform: translate(355px, -35px);
+          transform: translate(355px, -35px);
 }
 
-.main__section--hero > p {
-  position: absolute;
+@media (max-width: 63.9375em) {
+  .main__section--hero {
+    -webkit-transform: none;
+            transform: none;
+    max-width: 30em;
+    margin: auto;
+  }
+}
+
+@media (max-width: 39.9375em) {
+  .main__section--hero {
+    -webkit-transform: translateY(-40px);
+            transform: translateY(-40px);
+    max-width: 18em;
+    margin: auto;
+    text-align: center;
+  }
+}
+
+.main__section--hero > a {
   padding: .1875rem .625rem;
   color: #f6f4f1;
   text-shadow: .125rem .125rem 0 #00000020;
-  top: -42px;
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
   cursor: pointer;
@@ -401,8 +418,13 @@ a:hover {
   -webkit-animation: fadeInUp 1s ease-in-out 0s forwards;
 }
 
-.main__section--hero > p:is(:nth-child(2)) {
+.main__section--hero > a:is(:nth-child(2)) {
   left: 135px;
+}
+
+.main__section--hero > a:hover {
+  border: 0.125rem solid #FEF7DC;
+  color: #E6DDC6;
 }
 
 @-webkit-keyframes fadeInUp {
@@ -431,9 +453,10 @@ a:hover {
   }
 }
 
-.main__section--hero > p:hover {
-  border: 0.125rem solid #FEF7DC;
-  color: #E6DDC6;
+@media (max-width: 39.9375em) {
+  .main__section--hero > a {
+    line-height: 4;
+  }
 }
 
 .main__section--hero > h1 {
@@ -459,6 +482,13 @@ a:hover {
     opacity: 1;
     -webkit-transform: none;
     transform: none;
+  }
+}
+
+@media (max-width: 39.9375em) {
+  .main__section--hero > h1 {
+    font-size: 3.25rem;
+    text-shadow: 0.1875rem 0.1875rem 0 #FEF7DC;
   }
 }
 
@@ -488,8 +518,13 @@ a:hover {
   }
 }
 
+@media (max-width: 39.9375em) {
+  .main__section--hero > h4 {
+    font-size: 0.875rem;
+  }
+}
+
 .main__section--btn {
-  position: absolute;
   -webkit-transition: opacity .2s ease-in-out;
   transition: opacity .2s ease-in-out;
 }
@@ -633,6 +668,8 @@ a:hover {
 }
 
 .main__section--movie-quote {
+  -webkit-transform: translate(355px, -25px);
+          transform: translate(355px, -25px);
   border: 2px solid #FEF7DC;
   padding: 20px;
   font-family: 'Montserrat', sans-serif;
@@ -642,8 +679,6 @@ a:hover {
   width: 32rem;
   text-shadow: .125rem .125rem 0 #00000020;
   line-height: 1.5;
-  -webkit-transform: translate(180px, -25px);
-          transform: translate(180px, -25px);
 }
 
 .main__section--synopsis > p {
