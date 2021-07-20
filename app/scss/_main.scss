@@ -4,7 +4,7 @@
 
     &--cover-photo {
       &-1 {
-        @include cover-photo("/app/images/the-lobster-photo-1.jpg", 75);
+        @include cover-photo("https://lancemartija.github.io/app/images/the-lobster-photo-1.jpg", 75);
 
         margin: 0 0 1rem 0;
         animation: fadeInImg1 1.3s ease-in-out 0s forwards;
@@ -23,7 +23,7 @@
       }
 
       &-2 {
-        @include cover-photo("/app/images/the-lobster-photo-2.jpg", 30);
+        @include cover-photo("https://lancemartija.github.io/app/images/the-lobster-photo-2.jpg", 30);
 
         margin: 1rem 0 0 0;
         animation: fadeInImg2 1.3s ease-in-out 0s forwards;
@@ -43,7 +43,7 @@
     }
 
     &--hero {
-      transform: translate(355px, -35px);
+      transform: translate(377px, -35px);
 
       @include breakpoint-down(medium) {
         transform: none;
@@ -272,7 +272,7 @@
         text-align: center;
       }
 
-      transform: translate(355px, -25px);
+      transform: translate(377px, -25px);
       border: 2px solid $cp1;
       padding: 20px;
 
