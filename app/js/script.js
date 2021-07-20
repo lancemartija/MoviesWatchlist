@@ -1,17 +1,20 @@
 // card container toggle display
 const castButton = document.querySelector("#cast-button");
 const crewButton = document.querySelector("#crew-button");
+var cardOpen = true;
 
 const toggleCardDisplay = (card, chevron) => {
   let cardContainer = document.getElementById(card);
   let chevronIcon = document.getElementById(chevron);
 
-  if (cardContainer.classList.contains("toggle-display")) {
+  if (!cardOpen) {
     cardContainer.classList.remove("toggle-display");
     chevronIcon.classList.remove("rotate");
+    cardOpen = true;
   } else {
     cardContainer.classList.add("toggle-display");
     chevronIcon.classList.add("rotate");
+    cardOpen = false;
   }
 }
 
@@ -29,11 +32,9 @@ let menuOpen = false;
 
 burgerBtn.addEventListener('click', () => {
   if (!menuOpen) {
-    console.log('add');
     burgerBtn.classList.add('open');
     menuOpen = true;
   } else {
-    console.log('remove');
     burgerBtn.classList.remove('open');
     menuOpen = false;
   }
