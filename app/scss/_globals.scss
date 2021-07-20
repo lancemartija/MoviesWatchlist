@@ -52,17 +52,22 @@ a:hover {
     max-width: 30em;
     margin: auto;
   }
+
+  // 640px
+  @include breakpoint-down(small) {
+    max-width: 18em;
+  }
 }
 
 .hide-for-mobile {
   @include breakpoint-down(medium) {
-    display: none;
+    display: none !important;
   }
 }
 
 .hide-for-desktop {
   @include breakpoint-up(large) {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -93,10 +98,6 @@ a:hover {
 
   &-tmp-cols-auto-fit {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  }
-
-  &-tmp-cols {
-    grid-template-columns: repeat(4, 1fr);
   }
 }
 
