@@ -681,6 +681,26 @@ a:hover {
   line-height: 1.5;
 }
 
+@media (max-width: 63.9375em) {
+  .main__section--movie-quote {
+    -webkit-transform: none;
+            transform: none;
+    max-width: 30em;
+    margin: auto;
+    z-index: 1;
+  }
+}
+
+@media (max-width: 39.9375em) {
+  .main__section--movie-quote {
+    -webkit-transform: translateY(-40px);
+            transform: translateY(-40px);
+    max-width: 18em;
+    margin: auto;
+    text-align: center;
+  }
+}
+
 .main__section--synopsis > p {
   line-height: 1.5;
 }
