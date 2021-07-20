@@ -43,14 +43,25 @@
     }
 
     &--hero {
-      transform: translate(180px, -30px);
+      transform: translate(355px, -35px);
 
-      >p {
-        position: absolute;
+      @include breakpoint-down(medium) {
+        transform: none;
+        max-width: 30em;
+        margin: auto;
+      }
+
+      @include breakpoint-down(small) {
+        transform: translateY(-40px);
+        max-width: 18em;
+        margin: auto;
+        text-align: center;
+      }
+
+      >a {
         padding: .1875rem .625rem;
         color: $default-white;
         text-shadow: .125rem .125rem 0 #00000020;
-        top: -42px;
         transition: all .2s ease-in-out;
         cursor: pointer;
 
@@ -68,11 +79,15 @@
           left: 135px;
         }
 
-        @include animation-fade-in-up;
-
         &:hover {
           border: .125rem solid $cp1;
           color: $cp2;
+        }
+
+        @include animation-fade-in-up;
+
+        @include breakpoint-down(small) {
+          line-height: 4;
         }
       }
 
@@ -92,6 +107,11 @@
         }
 
         @include animation-fade-in-up;
+
+        @include breakpoint-down(small) {
+          font-size: $font-xlg;
+          text-shadow: .1875rem .1875rem 0 $cp1;
+        }
       }
 
       >h4 {
@@ -107,11 +127,14 @@
         }
 
         @include animation-fade-in-up;
+
+        @include breakpoint-down(small) {
+          font-size: $font-sm;
+        }
       }
     }
 
     &--btn {
-      position: absolute;
       transition: opacity .2s ease-in-out;
 
       &:hover {
@@ -234,6 +257,7 @@
     }
 
     &--movie-quote {
+      transform: translate(355px, -25px);
       border: 2px solid $cp1;
       padding: 20px;
 
@@ -247,7 +271,6 @@
       width: 32rem;
       text-shadow: .125rem .125rem 0 #00000020;
       line-height: 1.5;
-      transform: translate(180px, -25px);
     }
 
     &--synopsis {
