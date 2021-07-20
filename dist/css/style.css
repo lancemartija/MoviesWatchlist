@@ -1,9 +1,3 @@
-@media (max-width: 39.9375em) {
-  body .content {
-    max-width: 18em;
-  }
-}
-
 html, body {
   overflow-x: hidden;
 }
@@ -66,15 +60,21 @@ a:hover {
   }
 }
 
+@media (max-width: 39.9375em) {
+  .content {
+    max-width: 18em;
+  }
+}
+
 @media (max-width: 63.9375em) {
   .hide-for-mobile {
-    display: none;
+    display: none !important;
   }
 }
 
 @media (min-width: 64em) {
   .hide-for-desktop {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -117,11 +117,6 @@ a:hover {
 .grid-tmp-cols-auto-fit {
   -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-}
-
-.grid-tmp-cols {
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
 }
 
 .dim {
@@ -249,15 +244,59 @@ a:hover {
   transition: transform .2s ease-in-out, -webkit-transform .2s ease-in-out;
 }
 
-.header__burger-menu > span {
-  background: #A19882;
-  display: block;
-  width: 26px;
-  height: 3px;
+.header__burger-menu {
+  position: relative;
+  width: 35px;
+  height: 30px;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 
-.header__burger-menu > span:not(:nth-last-child(1)) {
-  margin-bottom: 5px;
+.header__burger-menu--btn > span {
+  background: #A19882;
+  position: absolute;
+  width: 28px;
+  height: 3px;
+  border-radius: 10px;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.header__burger-menu--btn > span::before, .header__burger-menu--btn > span::after {
+  content: '';
+  position: absolute;
+  background: #A19882;
+  width: 28px;
+  height: 3px;
+  border-radius: 10px;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.header__burger-menu--btn > span::before {
+  -webkit-transform: translateY(-8px);
+          transform: translateY(-8px);
+}
+
+.header__burger-menu--btn > span::after {
+  -webkit-transform: translateY(8px);
+          transform: translateY(8px);
+}
+
+.header__burger-menu.open.header__burger-menu--btn > span {
+  -webkit-transform: translateX(-50px);
+          transform: translateX(-50px);
+  background: transparent;
+}
+
+.header__burger-menu.open.header__burger-menu--btn > span::before {
+  -webkit-transform: rotate(45deg) translate(35px, -35px);
+          transform: rotate(45deg) translate(35px, -35px);
+}
+
+.header__burger-menu.open.header__burger-menu--btn > span::after {
+  -webkit-transform: rotate(-45deg) translate(35px, 35px);
+          transform: rotate(-45deg) translate(35px, 35px);
 }
 
 .main__section {
