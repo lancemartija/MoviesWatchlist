@@ -1,7 +1,7 @@
-const castButton = document.getElementById("cast-button");
-const crewButton = document.getElementById("crew-button");
+const castButton = document.querySelector("#cast-button");
+const crewButton = document.querySelector("#crew-button");
 
-castButton.onclick = function () {
+castButton.addEventListener('click', () => {
   const cardContainer = document.getElementById("card-container-1");
   const chevronIcon = document.getElementById("chevron-1");
 
@@ -12,9 +12,9 @@ castButton.onclick = function () {
     cardContainer.classList.add("toggle-display");
     chevronIcon.classList.add("rotate");
   }
-}
+})
 
-crewButton.onclick = function () {
+crewButton.addEventListener('click', () => {
   const cardContainer = document.getElementById("card-container-2");
   const chevronIcon = document.getElementById("chevron-2");
 
@@ -25,4 +25,4 @@ crewButton.onclick = function () {
     cardContainer.classList.add("toggle-display");
     chevronIcon.classList.add("rotate");
   }
-}
+})
