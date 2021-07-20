@@ -257,6 +257,21 @@
     }
 
     &--movie-quote {
+
+      @include breakpoint-down(medium) {
+        transform: none;
+        max-width: 30em;
+        margin: auto;
+        z-index: 1;
+      }
+
+      @include breakpoint-down(small) {
+        transform: translateY(-40px);
+        max-width: 18em;
+        margin: auto;
+        text-align: center;
+      }
+
       transform: translate(355px, -25px);
       border: 2px solid $cp1;
       padding: 20px;
