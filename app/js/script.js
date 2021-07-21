@@ -28,14 +28,25 @@ crewButton.addEventListener('click', () => {
 
 // burger btn animation
 const burgerBtn = document.querySelector('.header__burger-menu');
+const overlay = document.querySelector('.overlay');
+const html = document.querySelector('html');
+const body = document.querySelector('body');
 let menuOpen = false;
 
 burgerBtn.addEventListener('click', () => {
   if (!menuOpen) {
+    html.classList.add('noscroll');
+    body.classList.add('noscroll');
     burgerBtn.classList.add('open');
+    overlay.classList.add('fade-in');
+    overlay.classList.remove('fade-out');
     menuOpen = true;
   } else {
+    html.classList.remove('noscroll');
+    body.classList.remove('noscroll');
     burgerBtn.classList.remove('open');
+    overlay.classList.add('fade-out');
+    overlay.classList.remove('fade-in');
     menuOpen = false;
   }
 })
