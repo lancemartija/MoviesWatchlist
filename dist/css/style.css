@@ -1,3 +1,73 @@
+@-webkit-keyframes fade-in {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  1% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  1% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  -webkit-animation: fade-in .2s ease-in-out forwards;
+          animation: fade-in .2s ease-in-out forwards;
+}
+
+@-webkit-keyframes fade-out {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+  99% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+  99% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+.fade-out {
+  -webkit-animation: fade-out .2s ease-in-out forwards;
+          animation: fade-out .2s ease-in-out forwards;
+}
+
 html, body {
   overflow-x: hidden;
 }
@@ -7,6 +77,10 @@ html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   scroll-behavior: smooth;
+}
+
+html.noscroll {
+  overflow: hidden !important;
 }
 
 *,
@@ -33,6 +107,10 @@ body ::-moz-selection {
 body ::selection {
   color: #A19882;
   background: #FEF7DC;
+}
+
+body.noscroll {
+  overflow: hidden !important;
 }
 
 a,
@@ -157,6 +235,11 @@ a:hover {
 .rotate {
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
+}
+
+.header nav {
+  position: relative;
+  background-color: #f6f4f1;
 }
 
 .header--page-title > h1 {
@@ -299,6 +382,18 @@ a:hover {
           transform: rotate(-45deg) translate(35px, 35px);
 }
 
+.header .overlay {
+  opacity: 0;
+  position: fixed;
+  z-index: 1;
+  top: 3.5125rem;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #C2B8A3;
+  overflow: hidden;
+}
+
 .main__section {
   margin: auto auto 5rem auto;
 }
@@ -306,7 +401,7 @@ a:hover {
 .main__section--cover-photo-1 {
   width: 100%;
   height: 40rem;
-  background-image: url("https://lancemartija.github.io/app/images/the-lobster-photo-1.jpg");
+  background-image: url("/app/images/the-lobster-photo-1.jpg");
   background-size: cover;
   background-position-y: 75%;
   margin: 0 0 1rem 0;
@@ -343,7 +438,7 @@ a:hover {
 .main__section--cover-photo-2 {
   width: 100%;
   height: 40rem;
-  background-image: url("https://lancemartija.github.io/app/images/the-lobster-photo-2.jpg");
+  background-image: url("/app/images/the-lobster-photo-2.jpg");
   background-size: cover;
   background-position-y: 30%;
   margin: 1rem 0 0 0;
