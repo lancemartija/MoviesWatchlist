@@ -1,0 +1,64 @@
+// fade in up animation
+@mixin animation-fade-in-up {
+  opacity: 0;
+  animation: fadeInUp 1s ease-in-out 0s forwards;
+  -webkit-animation: fadeInUp 1s ease-in-out 0s forwards;
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 100%, 0);
+      transform: translate3d(0, 100%, 0);
+    }
+
+    to {
+      opacity: 1;
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+}
+
+// fade in animation
+@keyframes fade-in {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  1% {
+    visibility: visible;
+    opacity: 0;
+  }
+
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fade-in .2s ease-in-out forwards;
+}
+
+// fade in animation
+@keyframes fade-out {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  99% {
+    visibility: visible;
+    opacity: 0;
+  }
+
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+.fade-out {
+  animation: fade-out .2s ease-in-out forwards;
+}
