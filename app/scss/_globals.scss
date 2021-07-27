@@ -7,6 +7,10 @@ html {
   box-sizing: border-box;
   scroll-behavior: smooth;
   @extend %hide-extra-space;
+
+  &.noscroll {
+    overflow: hidden !important;
+  }
 }
 
 *,
@@ -27,6 +31,10 @@ body {
   ::selection {
     color: $cp4;
     background: $cp1;
+  }
+
+  &.noscroll {
+    overflow: hidden !important;
   }
 }
 

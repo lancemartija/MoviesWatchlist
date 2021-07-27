@@ -16,27 +16,6 @@ $breakpoints-down: ("small": "39.9375em", "medium": "63.9375em", "large": "87.43
   }
 }
 
-// fade in up animation
-@mixin animation-fade-in-up {
-  opacity: 0;
-  animation: fadeInUp 1s ease-in-out 0s forwards;
-  -webkit-animation: fadeInUp 1s ease-in-out 0s forwards;
-
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      -webkit-transform: translate3d(0, 100%, 0);
-      transform: translate3d(0, 100%, 0);
-    }
-
-    to {
-      opacity: 1;
-      -webkit-transform: none;
-      transform: none;
-    }
-  }
-}
-
 @mixin padding-margin-all($p, $m) {
   padding: #{$p};
   margin: #{$m};
