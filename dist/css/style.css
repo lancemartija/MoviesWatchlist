@@ -401,7 +401,7 @@ a:hover {
 .main__section--cover-photo-1 {
   width: 100%;
   height: 40rem;
-  background-image: url("/app/images/the-lobster-photo-1.jpg");
+  background-image: url("https://raw.githubusercontent.com/lancemartija/MoviesWatchlist/master/app/images/the-lobster-photo-1.jpg");
   background-size: cover;
   background-position-y: 75%;
   margin: 0 0 1rem 0;
@@ -438,7 +438,7 @@ a:hover {
 .main__section--cover-photo-2 {
   width: 100%;
   height: 40rem;
-  background-image: url("/app/images/the-lobster-photo-2.jpg");
+  background-image: url("https://raw.githubusercontent.com/lancemartija/MoviesWatchlist/master/app/images/the-lobster-photo-2.jpg");
   background-size: cover;
   background-position-y: 30%;
   margin: 1rem 0 0 0;
